@@ -13,6 +13,12 @@
 		6334871327FDC96B00C3CE30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6334871127FDC96B00C3CE30 /* Main.storyboard */; };
 		6334871527FDC96C00C3CE30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6334871427FDC96C00C3CE30 /* Assets.xcassets */; };
 		6334871827FDC96C00C3CE30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6334871627FDC96C00C3CE30 /* LaunchScreen.storyboard */; };
+		6334872127FDC9B000C3CE30 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 6334872027FDC9B000C3CE30 /* Moya */; };
+		6334872327FDC9B000C3CE30 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 6334872227FDC9B000C3CE30 /* RxMoya */; };
+		6334872627FDC9C800C3CE30 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 6334872527FDC9C800C3CE30 /* Kingfisher */; };
+		6334872A27FDCA0700C3CE30 /* NetworkRequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6334872927FDCA0700C3CE30 /* NetworkRequestType.swift */; };
+		6334872C27FDCA2100C3CE30 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6334872B27FDCA2100C3CE30 /* NetworkService.swift */; };
+		6334872E27FDCA3300C3CE30 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6334872D27FDCA3300C3CE30 /* APIEndpoints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,9 @@
 		6334871427FDC96C00C3CE30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6334871727FDC96C00C3CE30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6334871927FDC96C00C3CE30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6334872927FDCA0700C3CE30 /* NetworkRequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestType.swift; sourceTree = "<group>"; };
+		6334872B27FDCA2100C3CE30 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		6334872D27FDCA3300C3CE30 /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +40,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6334872627FDC9C800C3CE30 /* Kingfisher in Frameworks */,
+				6334872327FDC9B000C3CE30 /* RxMoya in Frameworks */,
+				6334872127FDC9B000C3CE30 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,12 +71,31 @@
 				6334870B27FDC96B00C3CE30 /* AppDelegate.swift */,
 				6334870D27FDC96B00C3CE30 /* SceneDelegate.swift */,
 				6334870F27FDC96B00C3CE30 /* ViewController.swift */,
+				6334872727FDC9F600C3CE30 /* Data */,
 				6334871127FDC96B00C3CE30 /* Main.storyboard */,
 				6334871427FDC96C00C3CE30 /* Assets.xcassets */,
 				6334871627FDC96C00C3CE30 /* LaunchScreen.storyboard */,
 				6334871927FDC96C00C3CE30 /* Info.plist */,
 			);
 			path = Homework;
+			sourceTree = "<group>";
+		};
+		6334872727FDC9F600C3CE30 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				6334872827FDC9FF00C3CE30 /* Network */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		6334872827FDC9FF00C3CE30 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				6334872927FDCA0700C3CE30 /* NetworkRequestType.swift */,
+				6334872B27FDCA2100C3CE30 /* NetworkService.swift */,
+				6334872D27FDCA3300C3CE30 /* APIEndpoints.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +114,11 @@
 			dependencies = (
 			);
 			name = Homework;
+			packageProductDependencies = (
+				6334872027FDC9B000C3CE30 /* Moya */,
+				6334872227FDC9B000C3CE30 /* RxMoya */,
+				6334872527FDC9C800C3CE30 /* Kingfisher */,
+			);
 			productName = Homework;
 			productReference = 6334870827FDC96B00C3CE30 /* Homework.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +147,10 @@
 				Base,
 			);
 			mainGroup = 633486FF27FDC96B00C3CE30;
+			packageReferences = (
+				6334871F27FDC9B000C3CE30 /* XCRemoteSwiftPackageReference "Moya" */,
+				6334872427FDC9C800C3CE30 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 6334870927FDC96B00C3CE30 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +178,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6334872C27FDCA2100C3CE30 /* NetworkService.swift in Sources */,
+				6334872A27FDCA0700C3CE30 /* NetworkRequestType.swift in Sources */,
 				6334871027FDC96B00C3CE30 /* ViewController.swift in Sources */,
+				6334872E27FDCA3300C3CE30 /* APIEndpoints.swift in Sources */,
 				6334870C27FDC96B00C3CE30 /* AppDelegate.swift in Sources */,
 				6334870E27FDC96B00C3CE30 /* SceneDelegate.swift in Sources */,
 			);
@@ -358,6 +401,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6334871F27FDC9B000C3CE30 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
+			};
+		};
+		6334872427FDC9C800C3CE30 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6334872027FDC9B000C3CE30 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6334871F27FDC9B000C3CE30 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		6334872227FDC9B000C3CE30 /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6334871F27FDC9B000C3CE30 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+		6334872527FDC9C800C3CE30 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6334872427FDC9C800C3CE30 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6334870027FDC96B00C3CE30 /* Project object */;
 }
