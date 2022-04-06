@@ -18,6 +18,10 @@
 		6334872A27FDCA0700C3CE30 /* NetworkRequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6334872927FDCA0700C3CE30 /* NetworkRequestType.swift */; };
 		6334872C27FDCA2100C3CE30 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6334872B27FDCA2100C3CE30 /* NetworkService.swift */; };
 		6334872E27FDCA3300C3CE30 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6334872D27FDCA3300C3CE30 /* APIEndpoints.swift */; };
+		63BADB7427FDCDA500A7A866 /* OpenSeaUseCaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BADB7327FDCDA500A7A866 /* OpenSeaUseCaseType.swift */; };
+		63BADB7627FDCDD000A7A866 /* OpenSeaAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BADB7527FDCDD000A7A866 /* OpenSeaAsset.swift */; };
+		63BADB7927FDCF4000A7A866 /* OpenSeaAssetDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BADB7827FDCF4000A7A866 /* OpenSeaAssetDTO.swift */; };
+		63BADB7B27FDD12400A7A866 /* DataMappingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BADB7A27FDD12400A7A866 /* DataMappingError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,10 @@
 		6334872927FDCA0700C3CE30 /* NetworkRequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestType.swift; sourceTree = "<group>"; };
 		6334872B27FDCA2100C3CE30 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		6334872D27FDCA3300C3CE30 /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
+		63BADB7327FDCDA500A7A866 /* OpenSeaUseCaseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSeaUseCaseType.swift; sourceTree = "<group>"; };
+		63BADB7527FDCDD000A7A866 /* OpenSeaAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSeaAsset.swift; sourceTree = "<group>"; };
+		63BADB7827FDCF4000A7A866 /* OpenSeaAssetDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSeaAssetDTO.swift; sourceTree = "<group>"; };
+		63BADB7A27FDD12400A7A866 /* DataMappingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMappingError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				6334872F27FDCB5E00C3CE30 /* Application */,
+				63BADB7027FDCD0C00A7A866 /* Domain */,
 				6334872727FDC9F600C3CE30 /* Data */,
 				6334871427FDC96C00C3CE30 /* Assets.xcassets */,
 				6334871627FDC96C00C3CE30 /* LaunchScreen.storyboard */,
@@ -89,6 +98,7 @@
 				6334872927FDCA0700C3CE30 /* NetworkRequestType.swift */,
 				6334872B27FDCA2100C3CE30 /* NetworkService.swift */,
 				6334872D27FDCA3300C3CE30 /* APIEndpoints.swift */,
+				63BADB7727FDCF2100A7A866 /* Data Mapping */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -101,6 +111,40 @@
 				6334870F27FDC96B00C3CE30 /* ViewController.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		63BADB7027FDCD0C00A7A866 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				63BADB7127FDCD8800A7A866 /* Entity */,
+				63BADB7227FDCD8E00A7A866 /* Use Case */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		63BADB7127FDCD8800A7A866 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				63BADB7527FDCDD000A7A866 /* OpenSeaAsset.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		63BADB7227FDCD8E00A7A866 /* Use Case */ = {
+			isa = PBXGroup;
+			children = (
+				63BADB7327FDCDA500A7A866 /* OpenSeaUseCaseType.swift */,
+			);
+			path = "Use Case";
+			sourceTree = "<group>";
+		};
+		63BADB7727FDCF2100A7A866 /* Data Mapping */ = {
+			isa = PBXGroup;
+			children = (
+				63BADB7A27FDD12400A7A866 /* DataMappingError.swift */,
+				63BADB7827FDCF4000A7A866 /* OpenSeaAssetDTO.swift */,
+			);
+			path = "Data Mapping";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,9 +226,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63BADB7627FDCDD000A7A866 /* OpenSeaAsset.swift in Sources */,
+				63BADB7927FDCF4000A7A866 /* OpenSeaAssetDTO.swift in Sources */,
 				6334872C27FDCA2100C3CE30 /* NetworkService.swift in Sources */,
 				6334872A27FDCA0700C3CE30 /* NetworkRequestType.swift in Sources */,
 				6334871027FDC96B00C3CE30 /* ViewController.swift in Sources */,
+				63BADB7B27FDD12400A7A866 /* DataMappingError.swift in Sources */,
+				63BADB7427FDCDA500A7A866 /* OpenSeaUseCaseType.swift in Sources */,
 				6334872E27FDCA3300C3CE30 /* APIEndpoints.swift in Sources */,
 				6334870C27FDC96B00C3CE30 /* AppDelegate.swift in Sources */,
 				6334870E27FDC96B00C3CE30 /* SceneDelegate.swift in Sources */,
