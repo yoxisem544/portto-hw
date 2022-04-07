@@ -23,6 +23,7 @@
 		63B92DA027FEE3EB00B4583A /* HomeFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B92D9F27FEE3EB00B4583A /* HomeFlowCoordinator.swift */; };
 		63B92DA227FEE40000B4583A /* HomeFlowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B92DA127FEE40000B4583A /* HomeFlowFactory.swift */; };
 		63B92DA427FEE6D000B4583A /* AppFlowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B92DA327FEE6D000B4583A /* AppFlowFactory.swift */; };
+		63B92DA627FEEB2300B4583A /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B92DA527FEEB2300B4583A /* CoordinatorType.swift */; };
 		63BADB7427FDCDA500A7A866 /* OpenSeaUseCaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BADB7327FDCDA500A7A866 /* OpenSeaUseCaseType.swift */; };
 		63BADB7627FDCDD000A7A866 /* OpenSeaAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BADB7527FDCDD000A7A866 /* OpenSeaAsset.swift */; };
 		63BADB7927FDCF4000A7A866 /* OpenSeaAssetDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BADB7827FDCF4000A7A866 /* OpenSeaAssetDTO.swift */; };
@@ -57,6 +58,7 @@
 		63B92D9F27FEE3EB00B4583A /* HomeFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlowCoordinator.swift; sourceTree = "<group>"; };
 		63B92DA127FEE40000B4583A /* HomeFlowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlowFactory.swift; sourceTree = "<group>"; };
 		63B92DA327FEE6D000B4583A /* AppFlowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowFactory.swift; sourceTree = "<group>"; };
+		63B92DA527FEEB2300B4583A /* CoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
 		63BADB7327FDCDA500A7A866 /* OpenSeaUseCaseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSeaUseCaseType.swift; sourceTree = "<group>"; };
 		63BADB7527FDCDD000A7A866 /* OpenSeaAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSeaAsset.swift; sourceTree = "<group>"; };
 		63BADB7827FDCF4000A7A866 /* OpenSeaAssetDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSeaAssetDTO.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 		63B92D9D27FEE3D600B4583A /* App */ = {
 			isa = PBXGroup;
 			children = (
+				63B92DA527FEEB2300B4583A /* CoordinatorType.swift */,
 				63B92D9927FEE25800B4583A /* AppFlowCoordinator.swift */,
 				63B92DA327FEE6D000B4583A /* AppFlowFactory.swift */,
 				63B92D9B27FEE26E00B4583A /* AppDIContainer.swift */,
@@ -337,6 +340,7 @@
 				63BADB9227FDE38F00A7A866 /* HomeCellectionViewCell.swift in Sources */,
 				63BADB8027FDD48A00A7A866 /* HomeViewModel.swift in Sources */,
 				63BADB7E27FDD46F00A7A866 /* HomeViewController.swift in Sources */,
+				63B92DA627FEEB2300B4583A /* CoordinatorType.swift in Sources */,
 				6334872E27FDCA3300C3CE30 /* APIEndpoints.swift in Sources */,
 				6334870C27FDC96B00C3CE30 /* AppDelegate.swift in Sources */,
 				6334870E27FDC96B00C3CE30 /* SceneDelegate.swift in Sources */,

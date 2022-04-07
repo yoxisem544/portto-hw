@@ -7,14 +7,17 @@
 
 import UIKit
 
-final class HomeFlowCoordinator {
+final class HomeFlowCoordinator: CoordinatorType {
 
     var navigation: UINavigationController
     private let factory: HomeFlowFactory
 
+    var children: [CoordinatorType]
+
     init(navigation: UINavigationController, factory: HomeFlowFactory) {
         self.navigation = navigation
         self.factory = factory
+        self.children = []
     }
 
     func start() {
@@ -26,12 +29,13 @@ final class HomeFlowCoordinator {
         }
     }
 
-    func showAsset(asset: OpenSeaAsset) {
+    private func showAsset(asset: OpenSeaAsset) {
         let asset = factory.makeAssetDetailView(asset: asset)
         navigation.pushViewController(asset, animated: true)
 
-        asset.onOpenPermalink = { [weak self] link in
-
+        asset.onOpenPermalink = { link in
+            guard UIApplication.shared.canOpenURL(link) else { return }
+            UIApplication.shared.open(link)
         }
     }
 }
