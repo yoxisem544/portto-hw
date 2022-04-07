@@ -12,4 +12,5 @@ struct OpenSeaAsset {
     let imageURL: String?
     let name: String
     let description: String?
+    let id: Int
 }

@@ -22,21 +22,25 @@ final class HomeViewModel {
 
     struct Input {
         let onLoad: AnyObserver<Void>
+        let onSelectIndex: AnyObserver<Int>
     }
 
     struct Output {
         let assets: BehaviorRelay<[OpenSeaAsset]>
         let doesReachEnd: BehaviorRelay<Bool>
+        let onSelectAsset: Driver<OpenSeaAsset?>
     }
 
     let input: Input
     let output: Output
 
     private let onLoadSubject = PublishSubject<Void>()
+    private let onSelectIndexSubject = PublishSubject<Int>()
 
     private let assetsSubject = BehaviorRelay<[OpenSeaAsset]>(value: [])
     private let offsetSubject = BehaviorRelay<Int>(value: 0)
     private let doesReachEndSubject = BehaviorRelay<Bool>(value: false)
+    private let onSelectAssetSubject = PublishSubject<OpenSeaAsset?>()
 
     // Init
 
@@ -44,12 +48,14 @@ final class HomeViewModel {
         self.openSeaUseCase = openSeaUseCase
 
         self.input = Input(
-            onLoad: onLoadSubject.asObserver()
+            onLoad: onLoadSubject.asObserver(),
+            onSelectIndex: onSelectIndexSubject.asObserver()
         )
 
         self.output = Output(
             assets: assetsSubject,
-            doesReachEnd: doesReachEndSubject
+            doesReachEnd: doesReachEndSubject,
+            onSelectAsset: onSelectAssetSubject.asDriver(onErrorJustReturn: nil)
         )
 
         onLoadSubject
@@ -71,6 +77,18 @@ final class HomeViewModel {
                     break
                 }
             }
+            .disposed(by: bag)
+
+        onSelectIndexSubject
+            .map { [assetsSubject] assetIndex -> OpenSeaAsset? in
+                if assetIndex < assetsSubject.value.count {
+                    let asset = assetsSubject.value[assetIndex]
+                    return asset
+                } else {
+                    return nil
+                }
+            }
+            .bind(to: onSelectAssetSubject)
             .disposed(by: bag)
     }
 }

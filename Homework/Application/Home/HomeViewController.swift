@@ -8,10 +8,16 @@
 import UIKit
 import RxSwift
 
-final class HomeViewController: UIViewController {
+protocol HomeViewOutpupt: AnyObject {
+    var onSelectAsset: ((OpenSeaAsset) -> Void)? { get set }
+}
+
+final class HomeViewController: UIViewController, HomeViewOutpupt {
 
     // MARK: - 📌 Constants
     // MARK: - 🔶 Properties
+
+    var onSelectAsset: ((OpenSeaAsset) -> Void)?
 
     private let viewModel: HomeViewModel
 
@@ -114,8 +120,17 @@ final class HomeViewController: UIViewController {
 
     private func observeViewModelOutputs() {
         Observable.combineLatest(viewModel.output.assets, viewModel.output.doesReachEnd)
+            .observe(on: MainScheduler.instance)
             .subscribe(onNext: { [weak self] _, _ in
                 self?.collectionView.reloadData()
+            })
+            .disposed(by: bag)
+
+        viewModel.output.onSelectAsset
+            .asObservable()
+            .compactMap { $0 }
+            .subscribe(onNext: { [weak self] asset in
+                self?.onSelectAsset?(asset)
             })
             .disposed(by: bag)
     }
@@ -164,6 +179,12 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         if let cell = cell as? HomeCollectionViewLoadingCell {
             cell.startLoading()
             viewModel.input.onLoad.on(.next(()))
+        }
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.section == 0 {
+            viewModel.input.onSelectIndex.on(.next(indexPath.item))
         }
     }
 }
