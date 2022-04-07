@@ -20,9 +20,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
 
-        window.rootViewController = HomeViewController(viewModel: HomeViewModel(openSeaUseCase: OpenSeaUseCase()))
+        let home =  HomeViewController(viewModel: HomeViewModel(openSeaUseCase: OpenSeaUseCase()))
+        window.rootViewController = home
         self.window = window
         window.makeKeyAndVisible()
+
+        home.onSelectAsset = { [weak self] asset in
+            let vm = AssetDetailViewModel(asset: asset)
+            let vc = AssetDetailViewController(viewModel: vm)
+            home.present(vc, animated: true)
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
