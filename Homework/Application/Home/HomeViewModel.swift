@@ -25,7 +25,7 @@ final class HomeViewModel {
     }
 
     struct Output {
-        let assets: Driver<[OpenSeaAsset]>
+        let assets: BehaviorRelay<[OpenSeaAsset]>
     }
 
     let input: Input
@@ -45,7 +45,7 @@ final class HomeViewModel {
         )
 
         self.output = Output(
-            assets: assetsSubject.asDriver(onErrorJustReturn: [])
+            assets: assetsSubject
         )
 
         onLoadSubject

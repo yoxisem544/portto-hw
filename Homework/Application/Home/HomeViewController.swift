@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RxSwift
 
 final class HomeViewController: UIViewController {
 
@@ -14,8 +15,16 @@ final class HomeViewController: UIViewController {
 
     private let viewModel: HomeViewModel
 
+    private let cellID = "cell_id"
+    private let loadingCellID = "loading_cell_id"
+
+    private let bag = DisposeBag()
+
     // MARK: - 🎨 Style
     // MARK: - 🧩 Subviews
+
+    private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
+
     // MARK: - 👆 Actions
     // MARK: - 🔨 Initialization
 
@@ -34,6 +43,7 @@ final class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         setupUI()
+        observeViewModelOutputs()
 
         viewModel.input.onLoad.onNext(())
     }
@@ -41,12 +51,121 @@ final class HomeViewController: UIViewController {
     // MARK: - 🏗 UI
 
     private func setupUI() {
+        collectionView.register(HomeCellectionViewCell.self, forCellWithReuseIdentifier: cellID)
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: loadingCellID)
+        collectionView.delegate = self
+        collectionView.dataSource = self
 
+        view.addSubview(collectionView)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            collectionView.topAnchor.constraint(equalTo: view.topAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+    }
+
+    // MARK: - Layout
+
+    private func createLayout() -> UICollectionViewCompositionalLayout {
+        return UICollectionViewCompositionalLayout { sectionIndex, env -> NSCollectionLayoutSection? in
+            switch sectionIndex {
+            case 0:
+                let fraction: CGFloat = 1 / 2
+                let inset: CGFloat = 4
+
+                // Item
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(fraction), heightDimension: .estimated(80))
+                let item = NSCollectionLayoutItem(layoutSize: itemSize)
+                item.contentInsets = NSDirectionalEdgeInsets(top: inset, leading: inset, bottom: inset, trailing: inset)
+
+                // Group
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(80))
+                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+
+                // Section
+                let section = NSCollectionLayoutSection(group: group)
+                section.contentInsets = NSDirectionalEdgeInsets(top: inset, leading: inset, bottom: inset, trailing: inset)
+                section.interGroupSpacing = inset
+
+                return section
+
+            case 1:
+                let item = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
+                                                                                     heightDimension: .fractionalHeight(1)))
+
+                let group = NSCollectionLayoutGroup.vertical(
+                    layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(80)),
+                    subitems: [item]
+                )
+
+                let section = NSCollectionLayoutSection(group: group)
+                section.contentInsets = .init(top: 0, leading: 0, bottom: 12, trailing: 0)
+
+                return section
+
+            default:
+                fatalError()
+            }
+        }
     }
 
     // MARK: - 🚌 Public Methods
     // MARK: - 🔒 Private Methods
 
+    private func observeViewModelOutputs() {
+        viewModel.output.assets
+            .subscribe(onNext: { [weak self] assets in
+                self?.collectionView.reloadData()
+            })
+            .disposed(by: bag)
+    }
 }
 
 // MARK: - 🧶 Extensions
+
+extension HomeViewController: UICollectionViewDataSource {
+
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        2
+    }
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        switch section {
+        case 0:
+            return viewModel.output.assets.value.count
+        case 1:
+            return 1
+        default:
+            fatalError()
+        }
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        switch indexPath.section {
+        case 0:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! HomeCellectionViewCell
+            let asset = viewModel.output.assets.value[indexPath.row]
+            cell.name = asset.name
+            cell.assetImageURL = asset.imageURL
+            return cell
+
+        case 1:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: loadingCellID, for: indexPath)
+            cell.backgroundColor = .red
+            cell.layer.borderWidth = 1
+            cell.layer.borderColor = UIColor.blue.cgColor
+            return cell
+
+        default:
+            fatalError()
+        }
+    }
+}
+
+extension HomeViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+
+    }
+}

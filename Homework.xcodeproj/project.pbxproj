@@ -30,6 +30,7 @@
 		63BADB8A27FDDC3100A7A866 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 63BADB8927FDDC3100A7A866 /* RxCocoa */; };
 		63BADB8C27FDDC3100A7A866 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 63BADB8B27FDDC3100A7A866 /* RxRelay */; };
 		63BADB8E27FDDC3100A7A866 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 63BADB8D27FDDC3100A7A866 /* RxSwift */; };
+		63BADB9227FDE38F00A7A866 /* HomeCellectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BADB9127FDE38F00A7A866 /* HomeCellectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		63BADB7A27FDD12400A7A866 /* DataMappingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMappingError.swift; sourceTree = "<group>"; };
 		63BADB7D27FDD46F00A7A866 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		63BADB7F27FDD48A00A7A866 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		63BADB9127FDE38F00A7A866 /* HomeCellectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 			children = (
 				63BADB7D27FDD46F00A7A866 /* HomeViewController.swift */,
 				63BADB7F27FDD48A00A7A866 /* HomeViewModel.swift */,
+				63BADB9127FDE38F00A7A866 /* HomeCellectionViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				6334871027FDC96B00C3CE30 /* ViewController.swift in Sources */,
 				63BADB7B27FDD12400A7A866 /* DataMappingError.swift in Sources */,
 				63BADB7427FDCDA500A7A866 /* OpenSeaUseCaseType.swift in Sources */,
+				63BADB9227FDE38F00A7A866 /* HomeCellectionViewCell.swift in Sources */,
 				63BADB8027FDD48A00A7A866 /* HomeViewModel.swift in Sources */,
 				63BADB7E27FDD46F00A7A866 /* HomeViewController.swift in Sources */,
 				6334872E27FDCA3300C3CE30 /* APIEndpoints.swift in Sources */,
