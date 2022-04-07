@@ -9,7 +9,17 @@ import Foundation
 
 final class AppDIContainer {
 
+    private let networkService: NetworkServiceType
+
+    init() {
+        networkService = DefaultNetworkService()
+    }
+
     func makeOpenSeaUseCase() -> OpenSeaUseCaseType {
-        OpenSeaUseCase()
+        OpenSeaUseCase(networkService: networkService)
+    }
+
+    func makeETHUseCase() -> ETHUseCaseType {
+        ETHUseCase(networkService: networkService)
     }
 }

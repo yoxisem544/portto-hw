@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		6334870C27FDC96B00C3CE30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6334870B27FDC96B00C3CE30 /* AppDelegate.swift */; };
 		6334870E27FDC96B00C3CE30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6334870D27FDC96B00C3CE30 /* SceneDelegate.swift */; };
-		6334871027FDC96B00C3CE30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6334870F27FDC96B00C3CE30 /* ViewController.swift */; };
 		6334871527FDC96C00C3CE30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6334871427FDC96C00C3CE30 /* Assets.xcassets */; };
 		6334871827FDC96C00C3CE30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6334871627FDC96C00C3CE30 /* LaunchScreen.storyboard */; };
 		6334872127FDC9B000C3CE30 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 6334872027FDC9B000C3CE30 /* Moya */; };
@@ -24,6 +23,10 @@
 		63B92DA227FEE40000B4583A /* HomeFlowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B92DA127FEE40000B4583A /* HomeFlowFactory.swift */; };
 		63B92DA427FEE6D000B4583A /* AppFlowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B92DA327FEE6D000B4583A /* AppFlowFactory.swift */; };
 		63B92DA627FEEB2300B4583A /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B92DA527FEEB2300B4583A /* CoordinatorType.swift */; };
+		63B92DA827FEED0200B4583A /* ETHUseCaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B92DA727FEED0200B4583A /* ETHUseCaseType.swift */; };
+		63B92DAA27FEED7100B4583A /* APIEndpoints+OpenSea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B92DA927FEED7100B4583A /* APIEndpoints+OpenSea.swift */; };
+		63B92DAC27FEED8D00B4583A /* APIEndpoints+ETH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B92DAB27FEED8C00B4583A /* APIEndpoints+ETH.swift */; };
+		63B92DAE27FEEE9500B4583A /* GetETHAmountDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B92DAD27FEEE9500B4583A /* GetETHAmountDTO.swift */; };
 		63BADB7427FDCDA500A7A866 /* OpenSeaUseCaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BADB7327FDCDA500A7A866 /* OpenSeaUseCaseType.swift */; };
 		63BADB7627FDCDD000A7A866 /* OpenSeaAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BADB7527FDCDD000A7A866 /* OpenSeaAsset.swift */; };
 		63BADB7927FDCF4000A7A866 /* OpenSeaAssetDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BADB7827FDCF4000A7A866 /* OpenSeaAssetDTO.swift */; };
@@ -46,7 +49,6 @@
 		6334870827FDC96B00C3CE30 /* Homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6334870B27FDC96B00C3CE30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6334870D27FDC96B00C3CE30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6334870F27FDC96B00C3CE30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6334871427FDC96C00C3CE30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6334871727FDC96C00C3CE30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6334871927FDC96C00C3CE30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,6 +61,10 @@
 		63B92DA127FEE40000B4583A /* HomeFlowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlowFactory.swift; sourceTree = "<group>"; };
 		63B92DA327FEE6D000B4583A /* AppFlowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowFactory.swift; sourceTree = "<group>"; };
 		63B92DA527FEEB2300B4583A /* CoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
+		63B92DA727FEED0200B4583A /* ETHUseCaseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETHUseCaseType.swift; sourceTree = "<group>"; };
+		63B92DA927FEED7100B4583A /* APIEndpoints+OpenSea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIEndpoints+OpenSea.swift"; sourceTree = "<group>"; };
+		63B92DAB27FEED8C00B4583A /* APIEndpoints+ETH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIEndpoints+ETH.swift"; sourceTree = "<group>"; };
+		63B92DAD27FEEE9500B4583A /* GetETHAmountDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetETHAmountDTO.swift; sourceTree = "<group>"; };
 		63BADB7327FDCDA500A7A866 /* OpenSeaUseCaseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSeaUseCaseType.swift; sourceTree = "<group>"; };
 		63BADB7527FDCDD000A7A866 /* OpenSeaAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSeaAsset.swift; sourceTree = "<group>"; };
 		63BADB7827FDCF4000A7A866 /* OpenSeaAssetDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSeaAssetDTO.swift; sourceTree = "<group>"; };
@@ -134,6 +140,8 @@
 				6334872927FDCA0700C3CE30 /* NetworkRequestType.swift */,
 				6334872B27FDCA2100C3CE30 /* NetworkService.swift */,
 				6334872D27FDCA3300C3CE30 /* APIEndpoints.swift */,
+				63B92DA927FEED7100B4583A /* APIEndpoints+OpenSea.swift */,
+				63B92DAB27FEED8C00B4583A /* APIEndpoints+ETH.swift */,
 				63BADB7727FDCF2100A7A866 /* Data Mapping */,
 			);
 			path = Network;
@@ -144,7 +152,6 @@
 			children = (
 				6334870B27FDC96B00C3CE30 /* AppDelegate.swift */,
 				6334870D27FDC96B00C3CE30 /* SceneDelegate.swift */,
-				6334870F27FDC96B00C3CE30 /* ViewController.swift */,
 				63B92D9827FEE24700B4583A /* Coordinators */,
 				63BADB7C27FDD46500A7A866 /* Home */,
 				63BADB9527FE8A8000A7A866 /* Asset Detail */,
@@ -202,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				63BADB7327FDCDA500A7A866 /* OpenSeaUseCaseType.swift */,
+				63B92DA727FEED0200B4583A /* ETHUseCaseType.swift */,
 			);
 			path = "Use Case";
 			sourceTree = "<group>";
@@ -211,6 +219,7 @@
 			children = (
 				63BADB7A27FDD12400A7A866 /* DataMappingError.swift */,
 				63BADB7827FDCF4000A7A866 /* OpenSeaAssetDTO.swift */,
+				63B92DAD27FEEE9500B4583A /* GetETHAmountDTO.swift */,
 			);
 			path = "Data Mapping";
 			sourceTree = "<group>";
@@ -328,12 +337,15 @@
 				6334872A27FDCA0700C3CE30 /* NetworkRequestType.swift in Sources */,
 				63B92DA427FEE6D000B4583A /* AppFlowFactory.swift in Sources */,
 				63BADB9927FE8A9800A7A866 /* AssetDetailViewModel.swift in Sources */,
+				63B92DAE27FEEE9500B4583A /* GetETHAmountDTO.swift in Sources */,
 				63B92DA227FEE40000B4583A /* HomeFlowFactory.swift in Sources */,
-				6334871027FDC96B00C3CE30 /* ViewController.swift in Sources */,
 				63B92DA027FEE3EB00B4583A /* HomeFlowCoordinator.swift in Sources */,
+				63B92DAA27FEED7100B4583A /* APIEndpoints+OpenSea.swift in Sources */,
 				63BADB7B27FDD12400A7A866 /* DataMappingError.swift in Sources */,
 				63BADB9427FE7EDC00A7A866 /* HomeCollectionViewLoadingCell.swift in Sources */,
 				63B92D9C27FEE26E00B4583A /* AppDIContainer.swift in Sources */,
+				63B92DAC27FEED8D00B4583A /* APIEndpoints+ETH.swift in Sources */,
+				63B92DA827FEED0200B4583A /* ETHUseCaseType.swift in Sources */,
 				63BADB7427FDCDA500A7A866 /* OpenSeaUseCaseType.swift in Sources */,
 				63BADB9727FE8A9200A7A866 /* AssetDetailViewController.swift in Sources */,
 				63B92D9A27FEE25800B4583A /* AppFlowCoordinator.swift in Sources */,

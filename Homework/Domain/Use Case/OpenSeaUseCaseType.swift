@@ -22,8 +22,8 @@ struct OpenSeaUseCase: OpenSeaUseCaseType {
 
     private let networkService: NetworkServiceType
 
-    init() {
-        networkService = DefaultNetworkService()
+    init(networkService: NetworkServiceType) {
+        self.networkService = networkService
     }
 
     func fetchAssets(of owner: String, offset: Int) -> Single<[OpenSeaAsset]> {
