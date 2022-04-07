@@ -18,6 +18,11 @@
 		6334872A27FDCA0700C3CE30 /* NetworkRequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6334872927FDCA0700C3CE30 /* NetworkRequestType.swift */; };
 		6334872C27FDCA2100C3CE30 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6334872B27FDCA2100C3CE30 /* NetworkService.swift */; };
 		6334872E27FDCA3300C3CE30 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6334872D27FDCA3300C3CE30 /* APIEndpoints.swift */; };
+		63B92D9A27FEE25800B4583A /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B92D9927FEE25800B4583A /* AppFlowCoordinator.swift */; };
+		63B92D9C27FEE26E00B4583A /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B92D9B27FEE26E00B4583A /* AppDIContainer.swift */; };
+		63B92DA027FEE3EB00B4583A /* HomeFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B92D9F27FEE3EB00B4583A /* HomeFlowCoordinator.swift */; };
+		63B92DA227FEE40000B4583A /* HomeFlowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B92DA127FEE40000B4583A /* HomeFlowFactory.swift */; };
+		63B92DA427FEE6D000B4583A /* AppFlowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B92DA327FEE6D000B4583A /* AppFlowFactory.swift */; };
 		63BADB7427FDCDA500A7A866 /* OpenSeaUseCaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BADB7327FDCDA500A7A866 /* OpenSeaUseCaseType.swift */; };
 		63BADB7627FDCDD000A7A866 /* OpenSeaAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BADB7527FDCDD000A7A866 /* OpenSeaAsset.swift */; };
 		63BADB7927FDCF4000A7A866 /* OpenSeaAssetDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BADB7827FDCF4000A7A866 /* OpenSeaAssetDTO.swift */; };
@@ -47,6 +52,11 @@
 		6334872927FDCA0700C3CE30 /* NetworkRequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestType.swift; sourceTree = "<group>"; };
 		6334872B27FDCA2100C3CE30 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		6334872D27FDCA3300C3CE30 /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
+		63B92D9927FEE25800B4583A /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
+		63B92D9B27FEE26E00B4583A /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
+		63B92D9F27FEE3EB00B4583A /* HomeFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlowCoordinator.swift; sourceTree = "<group>"; };
+		63B92DA127FEE40000B4583A /* HomeFlowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlowFactory.swift; sourceTree = "<group>"; };
+		63B92DA327FEE6D000B4583A /* AppFlowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowFactory.swift; sourceTree = "<group>"; };
 		63BADB7327FDCDA500A7A866 /* OpenSeaUseCaseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSeaUseCaseType.swift; sourceTree = "<group>"; };
 		63BADB7527FDCDD000A7A866 /* OpenSeaAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSeaAsset.swift; sourceTree = "<group>"; };
 		63BADB7827FDCF4000A7A866 /* OpenSeaAssetDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSeaAssetDTO.swift; sourceTree = "<group>"; };
@@ -133,10 +143,39 @@
 				6334870B27FDC96B00C3CE30 /* AppDelegate.swift */,
 				6334870D27FDC96B00C3CE30 /* SceneDelegate.swift */,
 				6334870F27FDC96B00C3CE30 /* ViewController.swift */,
+				63B92D9827FEE24700B4583A /* Coordinators */,
 				63BADB7C27FDD46500A7A866 /* Home */,
 				63BADB9527FE8A8000A7A866 /* Asset Detail */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		63B92D9827FEE24700B4583A /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				63B92D9D27FEE3D600B4583A /* App */,
+				63B92D9E27FEE3DB00B4583A /* Home */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		63B92D9D27FEE3D600B4583A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				63B92D9927FEE25800B4583A /* AppFlowCoordinator.swift */,
+				63B92DA327FEE6D000B4583A /* AppFlowFactory.swift */,
+				63B92D9B27FEE26E00B4583A /* AppDIContainer.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		63B92D9E27FEE3DB00B4583A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				63B92D9F27FEE3EB00B4583A /* HomeFlowCoordinator.swift */,
+				63B92DA127FEE40000B4583A /* HomeFlowFactory.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		63BADB7027FDCD0C00A7A866 /* Domain */ = {
@@ -284,12 +323,17 @@
 				63BADB7927FDCF4000A7A866 /* OpenSeaAssetDTO.swift in Sources */,
 				6334872C27FDCA2100C3CE30 /* NetworkService.swift in Sources */,
 				6334872A27FDCA0700C3CE30 /* NetworkRequestType.swift in Sources */,
+				63B92DA427FEE6D000B4583A /* AppFlowFactory.swift in Sources */,
 				63BADB9927FE8A9800A7A866 /* AssetDetailViewModel.swift in Sources */,
+				63B92DA227FEE40000B4583A /* HomeFlowFactory.swift in Sources */,
 				6334871027FDC96B00C3CE30 /* ViewController.swift in Sources */,
+				63B92DA027FEE3EB00B4583A /* HomeFlowCoordinator.swift in Sources */,
 				63BADB7B27FDD12400A7A866 /* DataMappingError.swift in Sources */,
 				63BADB9427FE7EDC00A7A866 /* HomeCollectionViewLoadingCell.swift in Sources */,
+				63B92D9C27FEE26E00B4583A /* AppDIContainer.swift in Sources */,
 				63BADB7427FDCDA500A7A866 /* OpenSeaUseCaseType.swift in Sources */,
 				63BADB9727FE8A9200A7A866 /* AssetDetailViewController.swift in Sources */,
+				63B92D9A27FEE25800B4583A /* AppFlowCoordinator.swift in Sources */,
 				63BADB9227FDE38F00A7A866 /* HomeCellectionViewCell.swift in Sources */,
 				63BADB8027FDD48A00A7A866 /* HomeViewModel.swift in Sources */,
 				63BADB7E27FDD46F00A7A866 /* HomeViewController.swift in Sources */,
