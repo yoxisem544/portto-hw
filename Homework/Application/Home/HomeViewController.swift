@@ -44,15 +44,13 @@ final class HomeViewController: UIViewController {
 
         setupUI()
         observeViewModelOutputs()
-
-        viewModel.input.onLoad.onNext(())
     }
 
     // MARK: - 🏗 UI
 
     private func setupUI() {
         collectionView.register(HomeCellectionViewCell.self, forCellWithReuseIdentifier: cellID)
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: loadingCellID)
+        collectionView.register(HomeCollectionViewLoadingCell.self, forCellWithReuseIdentifier: loadingCellID)
         collectionView.delegate = self
         collectionView.dataSource = self
 
@@ -152,10 +150,7 @@ extension HomeViewController: UICollectionViewDataSource {
             return cell
 
         case 1:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: loadingCellID, for: indexPath)
-            cell.backgroundColor = .red
-            cell.layer.borderWidth = 1
-            cell.layer.borderColor = UIColor.blue.cgColor
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: loadingCellID, for: indexPath) as! HomeCollectionViewLoadingCell
             return cell
 
         default:
@@ -166,6 +161,9 @@ extension HomeViewController: UICollectionViewDataSource {
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-
+        if let cell = cell as? HomeCollectionViewLoadingCell {
+            cell.startLoading()
+            viewModel.input.onLoad.on(.next(()))
+        }
     }
 }
