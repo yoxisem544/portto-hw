@@ -68,6 +68,8 @@ final class HomeViewController: UIViewController, HomeViewOutpupt {
             collectionView.topAnchor.constraint(equalTo: view.topAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
 
     // MARK: - Layout
@@ -132,6 +134,10 @@ final class HomeViewController: UIViewController, HomeViewOutpupt {
             .subscribe(onNext: { [weak self] asset in
                 self?.onSelectAsset?(asset)
             })
+            .disposed(by: bag)
+
+        viewModel.output.ethAmount
+            .drive(navigationItem.rx.title)
             .disposed(by: bag)
     }
 }

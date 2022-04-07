@@ -16,7 +16,10 @@ final class HomeFlowFactory {
     }
 
     func makeHomeView() -> HomeViewController {
-        let vm = HomeViewModel(openSeaUseCase: diContainer.makeOpenSeaUseCase())
+        let vm = HomeViewModel(
+            openSeaUseCase: diContainer.makeOpenSeaUseCase(),
+            ethUseCase: diContainer.makeETHUseCase()
+        )
         let vc = HomeViewController(viewModel: vm)
         return vc
     }

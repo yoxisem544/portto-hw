@@ -15,8 +15,11 @@ final class HomeViewModel {
     // Properties
 
     private let openSeaUseCase: OpenSeaUseCaseType
+    private let ethUseCase: ETHUseCaseType
 
     private var bag = DisposeBag()
+
+    private let address = "0x19818f44faf5a217f619aff0fd487cb2a55cca65"
 
     // Input & Output
 
@@ -29,6 +32,7 @@ final class HomeViewModel {
         let assets: BehaviorRelay<[OpenSeaAsset]>
         let doesReachEnd: BehaviorRelay<Bool>
         let onSelectAsset: Driver<OpenSeaAsset?>
+        let ethAmount: Driver<String>
     }
 
     let input: Input
@@ -41,11 +45,13 @@ final class HomeViewModel {
     private let offsetSubject = BehaviorRelay<Int>(value: 0)
     private let doesReachEndSubject = BehaviorRelay<Bool>(value: false)
     private let onSelectAssetSubject = PublishSubject<OpenSeaAsset?>()
+    private let ethAmountSubject = BehaviorRelay<String>(value: "- ETH")
 
     // Init
 
-    init(openSeaUseCase: OpenSeaUseCaseType) {
+    init(openSeaUseCase: OpenSeaUseCaseType, ethUseCase: ETHUseCaseType) {
         self.openSeaUseCase = openSeaUseCase
+        self.ethUseCase = ethUseCase
 
         self.input = Input(
             onLoad: onLoadSubject.asObserver(),
@@ -55,14 +61,15 @@ final class HomeViewModel {
         self.output = Output(
             assets: assetsSubject,
             doesReachEnd: doesReachEndSubject,
-            onSelectAsset: onSelectAssetSubject.asDriver(onErrorJustReturn: nil)
+            onSelectAsset: onSelectAssetSubject.asDriver(onErrorDriveWith: .empty()),
+            ethAmount: ethAmountSubject.asDriver(onErrorDriveWith: .empty())
         )
 
         onLoadSubject
             .filter { [doesReachEndSubject] _ in doesReachEndSubject.value == false }
             .withUnretained(self)
             .flatMapLatest { owner, _ in
-                return owner.openSeaUseCase.fetchAssets(of: "0x19818f44faf5a217f619aff0fd487cb2a55cca65", offset: owner.offsetSubject.value)
+                return owner.openSeaUseCase.fetchAssets(of: owner.address, offset: owner.offsetSubject.value)
                     .asObservable()
                     .catch { _ in return Observable.empty() } // handle error here
             }
@@ -77,6 +84,31 @@ final class HomeViewModel {
                     break
                 }
             }
+            .disposed(by: bag)
+
+        ethUseCase.fetchETHAmount(of: address)
+            .asObservable()
+            .catch { e in
+                print(e)
+                return .empty()
+            }
+            .map { amount -> String? in
+                let formatter = NumberFormatter()
+                formatter.maximumFractionDigits = 10
+                formatter.minimumFractionDigits = 10
+                formatter.numberStyle = .decimal
+
+                return formatter.string(for: amount)
+            }
+            .map { amount -> String in
+                if let amount = amount {
+                    return "\(amount) ETH"
+                } else {
+                    return "- ETH"
+                }
+            }
+            .asObservable()
+            .bind(to: ethAmountSubject)
             .disposed(by: bag)
 
         onSelectIndexSubject

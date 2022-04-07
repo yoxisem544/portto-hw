@@ -21,7 +21,7 @@ extension APIEndpoints {
             var path: String { "/getAddressInfo/\(address)" }
 
             var parameters: [String: Any] {
-                ["apiKey": "freeKey"]
+                ["apiKey": "freekey"]
             }
 
             private let address: String
