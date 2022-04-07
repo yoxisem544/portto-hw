@@ -11,9 +11,6 @@
 		6334870E27FDC96B00C3CE30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6334870D27FDC96B00C3CE30 /* SceneDelegate.swift */; };
 		6334871527FDC96C00C3CE30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6334871427FDC96C00C3CE30 /* Assets.xcassets */; };
 		6334871827FDC96C00C3CE30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6334871627FDC96C00C3CE30 /* LaunchScreen.storyboard */; };
-		6334872127FDC9B000C3CE30 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 6334872027FDC9B000C3CE30 /* Moya */; };
-		6334872327FDC9B000C3CE30 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 6334872227FDC9B000C3CE30 /* RxMoya */; };
-		6334872627FDC9C800C3CE30 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 6334872527FDC9C800C3CE30 /* Kingfisher */; };
 		6334872A27FDCA0700C3CE30 /* NetworkRequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6334872927FDCA0700C3CE30 /* NetworkRequestType.swift */; };
 		6334872C27FDCA2100C3CE30 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6334872B27FDCA2100C3CE30 /* NetworkService.swift */; };
 		6334872E27FDCA3300C3CE30 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6334872D27FDCA3300C3CE30 /* APIEndpoints.swift */; };
@@ -33,19 +30,16 @@
 		63BADB7B27FDD12400A7A866 /* DataMappingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BADB7A27FDD12400A7A866 /* DataMappingError.swift */; };
 		63BADB7E27FDD46F00A7A866 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BADB7D27FDD46F00A7A866 /* HomeViewController.swift */; };
 		63BADB8027FDD48A00A7A866 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BADB7F27FDD48A00A7A866 /* HomeViewModel.swift */; };
-		63BADB8327FDD64200A7A866 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 63BADB8227FDD64200A7A866 /* RxCocoa */; };
-		63BADB8527FDD64200A7A866 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 63BADB8427FDD64200A7A866 /* RxRelay */; };
-		63BADB8727FDD64200A7A866 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 63BADB8627FDD64200A7A866 /* RxSwift */; };
-		63BADB8A27FDDC3100A7A866 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 63BADB8927FDDC3100A7A866 /* RxCocoa */; };
-		63BADB8C27FDDC3100A7A866 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 63BADB8B27FDDC3100A7A866 /* RxRelay */; };
-		63BADB8E27FDDC3100A7A866 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 63BADB8D27FDDC3100A7A866 /* RxSwift */; };
 		63BADB9227FDE38F00A7A866 /* HomeCellectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BADB9127FDE38F00A7A866 /* HomeCellectionViewCell.swift */; };
 		63BADB9427FE7EDC00A7A866 /* HomeCollectionViewLoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BADB9327FE7EDC00A7A866 /* HomeCollectionViewLoadingCell.swift */; };
 		63BADB9727FE8A9200A7A866 /* AssetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BADB9627FE8A9200A7A866 /* AssetDetailViewController.swift */; };
 		63BADB9927FE8A9800A7A866 /* AssetDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BADB9827FE8A9800A7A866 /* AssetDetailViewModel.swift */; };
+		79F617084114A2462C296860 /* Pods_Homework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1147391028560A9E034DD652 /* Pods_Homework.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1147391028560A9E034DD652 /* Pods_Homework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Homework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E9079A6CF44ED1C2C3AD50C /* Pods-Homework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homework.release.xcconfig"; path = "Target Support Files/Pods-Homework/Pods-Homework.release.xcconfig"; sourceTree = "<group>"; };
 		6334870827FDC96B00C3CE30 /* Homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6334870B27FDC96B00C3CE30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6334870D27FDC96B00C3CE30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +69,7 @@
 		63BADB9327FE7EDC00A7A866 /* HomeCollectionViewLoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewLoadingCell.swift; sourceTree = "<group>"; };
 		63BADB9627FE8A9200A7A866 /* AssetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetDetailViewController.swift; sourceTree = "<group>"; };
 		63BADB9827FE8A9800A7A866 /* AssetDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetDetailViewModel.swift; sourceTree = "<group>"; };
+		C095792368C8C8AC3F2AD722 /* Pods-Homework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homework.debug.xcconfig"; path = "Target Support Files/Pods-Homework/Pods-Homework.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,15 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63BADB8E27FDDC3100A7A866 /* RxSwift in Frameworks */,
-				63BADB8727FDD64200A7A866 /* RxSwift in Frameworks */,
-				63BADB8527FDD64200A7A866 /* RxRelay in Frameworks */,
-				6334872627FDC9C800C3CE30 /* Kingfisher in Frameworks */,
-				63BADB8A27FDDC3100A7A866 /* RxCocoa in Frameworks */,
-				6334872327FDC9B000C3CE30 /* RxMoya in Frameworks */,
-				63BADB8327FDD64200A7A866 /* RxCocoa in Frameworks */,
-				63BADB8C27FDDC3100A7A866 /* RxRelay in Frameworks */,
-				6334872127FDC9B000C3CE30 /* Moya in Frameworks */,
+				79F617084114A2462C296860 /* Pods_Homework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +89,8 @@
 			children = (
 				6334870A27FDC96B00C3CE30 /* Homework */,
 				6334870927FDC96B00C3CE30 /* Products */,
+				F96769C72D20DD4F4AB9C51C /* Pods */,
+				952CE8BF6091C3023800555A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -244,6 +233,23 @@
 			path = "Asset Detail";
 			sourceTree = "<group>";
 		};
+		952CE8BF6091C3023800555A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1147391028560A9E034DD652 /* Pods_Homework.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F96769C72D20DD4F4AB9C51C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C095792368C8C8AC3F2AD722 /* Pods-Homework.debug.xcconfig */,
+				3E9079A6CF44ED1C2C3AD50C /* Pods-Homework.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -251,9 +257,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6334871C27FDC96C00C3CE30 /* Build configuration list for PBXNativeTarget "Homework" */;
 			buildPhases = (
+				3E98E5F21CCB2DBB9BAF86E0 /* [CP] Check Pods Manifest.lock */,
 				6334870427FDC96B00C3CE30 /* Sources */,
 				6334870527FDC96B00C3CE30 /* Frameworks */,
 				6334870627FDC96B00C3CE30 /* Resources */,
+				BDD71FC19C7FA1356C3A94DE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -261,15 +269,6 @@
 			);
 			name = Homework;
 			packageProductDependencies = (
-				6334872027FDC9B000C3CE30 /* Moya */,
-				6334872227FDC9B000C3CE30 /* RxMoya */,
-				6334872527FDC9C800C3CE30 /* Kingfisher */,
-				63BADB8227FDD64200A7A866 /* RxCocoa */,
-				63BADB8427FDD64200A7A866 /* RxRelay */,
-				63BADB8627FDD64200A7A866 /* RxSwift */,
-				63BADB8927FDDC3100A7A866 /* RxCocoa */,
-				63BADB8B27FDDC3100A7A866 /* RxRelay */,
-				63BADB8D27FDDC3100A7A866 /* RxSwift */,
 			);
 			productName = Homework;
 			productReference = 6334870827FDC96B00C3CE30 /* Homework.app */;
@@ -300,10 +299,6 @@
 			);
 			mainGroup = 633486FF27FDC96B00C3CE30;
 			packageReferences = (
-				6334871F27FDC9B000C3CE30 /* XCRemoteSwiftPackageReference "Moya" */,
-				6334872427FDC9C800C3CE30 /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				63BADB8127FDD64200A7A866 /* XCRemoteSwiftPackageReference "RxSwift" */,
-				63BADB8827FDDC3100A7A866 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 6334870927FDC96B00C3CE30 /* Products */;
 			projectDirPath = "";
@@ -325,6 +320,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3E98E5F21CCB2DBB9BAF86E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Homework-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDD71FC19C7FA1356C3A94DE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Homework/Pods-Homework-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Homework/Pods-Homework-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Homework/Pods-Homework-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6334870427FDC96B00C3CE30 /* Sources */ = {
@@ -489,6 +526,7 @@
 		};
 		6334871D27FDC96C00C3CE30 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C095792368C8C8AC3F2AD722 /* Pods-Homework.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -516,6 +554,7 @@
 		};
 		6334871E27FDC96C00C3CE30 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E9079A6CF44ED1C2C3AD50C /* Pods-Homework.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -563,89 +602,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		6334871F27FDC9B000C3CE30 /* XCRemoteSwiftPackageReference "Moya" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:Moya/Moya.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 15.0.0;
-			};
-		};
-		6334872427FDC9C800C3CE30 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 7.0.0;
-			};
-		};
-		63BADB8127FDD64200A7A866 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.0.0;
-			};
-		};
-		63BADB8827FDDC3100A7A866 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		6334872027FDC9B000C3CE30 /* Moya */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6334871F27FDC9B000C3CE30 /* XCRemoteSwiftPackageReference "Moya" */;
-			productName = Moya;
-		};
-		6334872227FDC9B000C3CE30 /* RxMoya */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6334871F27FDC9B000C3CE30 /* XCRemoteSwiftPackageReference "Moya" */;
-			productName = RxMoya;
-		};
-		6334872527FDC9C800C3CE30 /* Kingfisher */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6334872427FDC9C800C3CE30 /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = Kingfisher;
-		};
-		63BADB8227FDD64200A7A866 /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 63BADB8127FDD64200A7A866 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
-		};
-		63BADB8427FDD64200A7A866 /* RxRelay */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 63BADB8127FDD64200A7A866 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxRelay;
-		};
-		63BADB8627FDD64200A7A866 /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 63BADB8127FDD64200A7A866 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
-		63BADB8927FDDC3100A7A866 /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 63BADB8127FDD64200A7A866 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
-		};
-		63BADB8B27FDDC3100A7A866 /* RxRelay */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 63BADB8127FDD64200A7A866 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxRelay;
-		};
-		63BADB8D27FDDC3100A7A866 /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 63BADB8127FDD64200A7A866 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6334870027FDC96B00C3CE30 /* Project object */;
 }

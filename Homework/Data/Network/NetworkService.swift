@@ -8,7 +8,6 @@
 import Foundation
 import Moya
 import RxSwift
-import RxMoya
 
 protocol NetworkServiceType {
     func request<R: NetworkRequestType>(_ request: R) -> Single<Response>
