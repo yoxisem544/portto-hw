@@ -27,7 +27,7 @@ struct RawOpenSeaAsset: Decodable {
 
     struct Collection: Decodable {
         let name: String
-        let description: String
+        let description: String?
 
         enum CodingKeys: String, CodingKey {
             case name = "name"
@@ -37,7 +37,7 @@ struct RawOpenSeaAsset: Decodable {
         init(from decoder: Decoder) throws {
             let container = try decoder.container(keyedBy: CodingKeys.self)
             name = try container.decode(String.self, forKey: .name)
-            description = try container.decode(String.self, forKey: .description)
+            description = try? container.decode(String.self, forKey: .description)
         }
     }
 }

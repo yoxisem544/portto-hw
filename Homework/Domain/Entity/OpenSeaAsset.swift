@@ -11,5 +11,5 @@ struct OpenSeaAsset {
     let permalink: URL
     let imageURL: String?
     let name: String
-    let description: String
+    let description: String?
 }

@@ -113,8 +113,8 @@ final class HomeViewController: UIViewController {
     // MARK: - 🔒 Private Methods
 
     private func observeViewModelOutputs() {
-        viewModel.output.assets
-            .subscribe(onNext: { [weak self] assets in
+        Observable.combineLatest(viewModel.output.assets, viewModel.output.doesReachEnd)
+            .subscribe(onNext: { [weak self] _, _ in
                 self?.collectionView.reloadData()
             })
             .disposed(by: bag)
@@ -134,7 +134,7 @@ extension HomeViewController: UICollectionViewDataSource {
         case 0:
             return viewModel.output.assets.value.count
         case 1:
-            return 1
+            return viewModel.output.doesReachEnd.value ? 0 : 1
         default:
             fatalError()
         }
