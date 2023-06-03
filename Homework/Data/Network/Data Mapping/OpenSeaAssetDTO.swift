@@ -12,12 +12,14 @@ struct RawOpenSeaAsset: Decodable {
     let imageURL: String?
     let collection: Collection
     let id: Int
+    let backgroundColor: String?
 
     enum CodingKeys: String, CodingKey {
         case permalink = "permalink"
         case imageURL = "image_url"
         case collection = "collection"
         case id = "id"
+        case backgroundColor = "background_color"
     }
 
     init(from decoder: Decoder) throws {
@@ -26,6 +28,7 @@ struct RawOpenSeaAsset: Decodable {
         imageURL = try? container.decode(String.self, forKey: .imageURL)
         collection = try container.decode(Collection.self, forKey: .collection)
         id = try container.decode(Int.self, forKey: .id)
+        backgroundColor = try? container.decode(String.self, forKey: .backgroundColor)
     }
 
     struct Collection: Decodable {
@@ -54,7 +57,8 @@ extension RawOpenSeaAsset {
             imageURL: imageURL,
             name: collection.name,
             description: collection.description,
-            id: id
+            id: id,
+            backgroundColorHexString: backgroundColor
         )
     }
 }

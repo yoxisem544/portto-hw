@@ -12,6 +12,8 @@
 		632F3B442A2B3FB500C82154 /* OpenSeaPageResultDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632F3B432A2B3FB500C82154 /* OpenSeaPageResultDTO.swift */; };
 		632F3B462A2B3FD100C82154 /* OpenSeaPageResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632F3B452A2B3FD100C82154 /* OpenSeaPageResult.swift */; };
 		632F3B482A2B533D00C82154 /* BigInt+ETH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632F3B472A2B533D00C82154 /* BigInt+ETH.swift */; };
+		632F3B4A2A2B54B500C82154 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632F3B492A2B54B500C82154 /* UIColor+Hex.swift */; };
+		632F3B4C2A2B56B100C82154 /* String+HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632F3B4B2A2B56B100C82154 /* String+HexColor.swift */; };
 		6334870C27FDC96B00C3CE30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6334870B27FDC96B00C3CE30 /* AppDelegate.swift */; };
 		6334870E27FDC96B00C3CE30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6334870D27FDC96B00C3CE30 /* SceneDelegate.swift */; };
 		6334871527FDC96C00C3CE30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6334871427FDC96C00C3CE30 /* Assets.xcassets */; };
@@ -50,6 +52,8 @@
 		632F3B432A2B3FB500C82154 /* OpenSeaPageResultDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSeaPageResultDTO.swift; sourceTree = "<group>"; };
 		632F3B452A2B3FD100C82154 /* OpenSeaPageResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSeaPageResult.swift; sourceTree = "<group>"; };
 		632F3B472A2B533D00C82154 /* BigInt+ETH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BigInt+ETH.swift"; sourceTree = "<group>"; };
+		632F3B492A2B54B500C82154 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		632F3B4B2A2B56B100C82154 /* String+HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+HexColor.swift"; sourceTree = "<group>"; };
 		6334870827FDC96B00C3CE30 /* Homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6334870B27FDC96B00C3CE30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6334870D27FDC96B00C3CE30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 				632F3B3F2A2B378B00C82154 /* Kingfisher+SVG+WebP.swift */,
 				632F3B412A2B399B00C82154 /* Data+SVG.swift */,
 				632F3B472A2B533D00C82154 /* BigInt+ETH.swift */,
+				632F3B492A2B54B500C82154 /* UIColor+Hex.swift */,
+				632F3B4B2A2B56B100C82154 /* String+HexColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -403,6 +409,7 @@
 				63B92DA227FEE40000B4583A /* HomeFlowFactory.swift in Sources */,
 				632F3B442A2B3FB500C82154 /* OpenSeaPageResultDTO.swift in Sources */,
 				63B92DA027FEE3EB00B4583A /* HomeFlowCoordinator.swift in Sources */,
+				632F3B4A2A2B54B500C82154 /* UIColor+Hex.swift in Sources */,
 				63B92DAA27FEED7100B4583A /* APIEndpoints+OpenSea.swift in Sources */,
 				63BADB7B27FDD12400A7A866 /* DataMappingError.swift in Sources */,
 				63BADB9427FE7EDC00A7A866 /* HomeCollectionViewLoadingCell.swift in Sources */,
@@ -412,6 +419,7 @@
 				63BADB7427FDCDA500A7A866 /* OpenSeaUseCaseType.swift in Sources */,
 				63BADB9727FE8A9200A7A866 /* AssetDetailViewController.swift in Sources */,
 				63B92D9A27FEE25800B4583A /* AppFlowCoordinator.swift in Sources */,
+				632F3B4C2A2B56B100C82154 /* String+HexColor.swift in Sources */,
 				63BADB9227FDE38F00A7A866 /* HomeCellectionViewCell.swift in Sources */,
 				63BADB8027FDD48A00A7A866 /* HomeViewModel.swift in Sources */,
 				632F3B402A2B378B00C82154 /* Kingfisher+SVG+WebP.swift in Sources */,

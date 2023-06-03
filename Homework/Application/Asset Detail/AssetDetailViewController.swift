@@ -186,6 +186,9 @@ final class AssetDetailViewController: UIViewController, AssetDetailViewOutput {
             }
         )
 
+        let color = asset.backgroundColorHexString?.hexColor ?? .black // for default svg color
+        imageView.backgroundColor = color
+
         nameLabel.text = asset.name
         descriptionLabel.text = asset.description
 

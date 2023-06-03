@@ -168,6 +168,7 @@ extension HomeViewController: UICollectionViewDataSource {
             let asset = viewModel.output.assets.value[indexPath.row]
             cell.name = asset.name
             cell.assetImageURL = asset.imageURL
+            cell.assetBackgroundColorHexString = asset.backgroundColorHexString
             return cell
 
         case 1:

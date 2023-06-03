@@ -32,6 +32,13 @@ final class HomeCellectionViewCell: UICollectionViewCell {
         }
     }
 
+    var assetBackgroundColorHexString: String? {
+        didSet {
+            let color = assetBackgroundColorHexString?.hexColor ?? .black // for default svg color
+            assetImageView.backgroundColor = color
+        }
+    }
+
     // MARK: - 🎨 Style
     // MARK: - 🧩 Subviews
 

@@ -13,4 +13,5 @@ struct OpenSeaAsset {
     let name: String
     let description: String?
     let id: Int
+    let backgroundColorHexString: String?
 }
