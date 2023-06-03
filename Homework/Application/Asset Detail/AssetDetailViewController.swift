@@ -189,10 +189,10 @@ final class AssetDetailViewController: UIViewController, AssetDetailViewOutput {
         let color = asset.backgroundColorHexString?.hexColor ?? .black // for default svg color
         imageView.backgroundColor = color
 
-        nameLabel.text = asset.name
+        nameLabel.text = asset.name ?? asset.collectionName
         descriptionLabel.text = asset.description
 
-        navigationItem.title = asset.name
+        navigationItem.title = asset.collectionName
     }
 }
 

@@ -166,9 +166,7 @@ extension HomeViewController: UICollectionViewDataSource {
         case 0:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! HomeCellectionViewCell
             let asset = viewModel.output.assets.value[indexPath.row]
-            cell.name = asset.name
-            cell.assetImageURL = asset.imageURL
-            cell.assetBackgroundColorHexString = asset.backgroundColorHexString
+            cell.asset = asset
             return cell
 
         case 1:

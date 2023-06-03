@@ -13,6 +13,14 @@ final class HomeCellectionViewCell: UICollectionViewCell {
     // MARK: - 📌 Constants
     // MARK: - 🔶 Properties
 
+    var asset: OpenSeaAsset? {
+        didSet {
+            assetImageURL = asset?.imageURL
+            name = asset?.name ?? asset?.collectionName
+            assetBackgroundColorHexString = asset?.backgroundColorHexString
+        }
+    }
+
     var assetImageURL: String? {
         didSet {
             let url: URL? = {
