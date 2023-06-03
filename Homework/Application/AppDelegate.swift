@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // Setup Kingfisher's webp support
         KingfisherManager.shared.defaultOptions = [
-            .processor(WebPProcessor.default),
-            .cacheSerializer(WebPSerializer.default)
+            .processor(SVGAndWebPImageProcessor.default),
+            .cacheSerializer(SVGAndWebPSerializer.default),
         ]
 
         return true

@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (5.7.1)
+  - CocoaLumberjack (3.8.0):
+    - CocoaLumberjack/Core (= 3.8.0)
+  - CocoaLumberjack/Core (3.8.0)
   - Kingfisher (7.7.0)
   - KingfisherWebP (1.4.0):
     - Kingfisher (~> 7.0)
@@ -26,6 +29,8 @@ PODS:
   - RxRelay (6.5.0):
     - RxSwift (= 6.5.0)
   - RxSwift (6.5.0)
+  - SVGKit (3.0.0):
+    - CocoaLumberjack (~> 3.0)
 
 DEPENDENCIES:
   - Kingfisher
@@ -35,10 +40,12 @@ DEPENDENCIES:
   - RxCocoa
   - RxRelay
   - RxSwift
+  - SVGKit
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - CocoaLumberjack
     - Kingfisher
     - KingfisherWebP
     - libwebp
@@ -46,9 +53,11 @@ SPEC REPOS:
     - RxCocoa
     - RxRelay
     - RxSwift
+    - SVGKit
 
 SPEC CHECKSUMS:
   Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
+  CocoaLumberjack: 78abfb691154e2a9df8ded4350d504ee19d90732
   Kingfisher: f043ac666dfc96c1f37604f93effb45a7ee3a3e1
   KingfisherWebP: f4b76064c50a36c4cadd37548496ecebfdcb39e8
   libwebp: f62cb61d0a484ba548448a4bd52aabf150ff6eef
@@ -56,7 +65,8 @@ SPEC CHECKSUMS:
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+  SVGKit: 1ad7513f8c74d9652f94ed64ddecda1a23864dea
 
-PODFILE CHECKSUM: 367ee4dd6df8c2104e21410b15aa40b2af2eae13
+PODFILE CHECKSUM: 4156ac0fd72410198c88fc711d9660135d9f676f
 
 COCOAPODS: 1.11.2
