@@ -14,6 +14,7 @@ target 'Homework' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'RxRelay'
+  pod "BigInt"
 
 end
 

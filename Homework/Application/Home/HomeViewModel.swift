@@ -47,11 +47,19 @@ final class HomeViewModel {
     private let onSelectAssetSubject = PublishSubject<OpenSeaAsset?>()
     private let ethAmountSubject = BehaviorRelay<String>(value: "- ETH")
 
+    private let numberFormatter: NumberFormatter
+
     // Init
 
     init(openSeaUseCase: OpenSeaUseCaseType, ethUseCase: ETHUseCaseType) {
         self.openSeaUseCase = openSeaUseCase
         self.ethUseCase = ethUseCase
+
+        let formatter = NumberFormatter()
+        formatter.maximumFractionDigits = 10
+        formatter.minimumFractionDigits = 10
+        formatter.numberStyle = .decimal
+        self.numberFormatter = formatter
 
         self.input = Input(
             onLoad: onLoadSubject.asObserver(),
@@ -65,6 +73,10 @@ final class HomeViewModel {
             ethAmount: ethAmountSubject.asDriver(onErrorDriveWith: .empty())
         )
 
+        setupDataMapping()
+    }
+
+    private func setupDataMapping() {
         onLoadSubject
             .filter { [doesReachEndSubject] _ in doesReachEndSubject.value == false }
             .withUnretained(self)
@@ -94,13 +106,17 @@ final class HomeViewModel {
                 print(e)
                 return .empty()
             }
-            .map { amount -> String? in
-                let formatter = NumberFormatter()
-                formatter.maximumFractionDigits = 10
-                formatter.minimumFractionDigits = 10
-                formatter.numberStyle = .decimal
+            .map { bigInt -> Decimal? in
+                guard let bigInt else { return nil }
 
-                return formatter.string(for: amount)
+                let str = String(bigInt, radix: 10)
+                guard var number = Decimal(string: str) else { return nil }
+
+                number /= pow(10, 18) // ETH decimals
+                return number
+            }
+            .map { [numberFormatter] amount -> String? in
+                numberFormatter.string(for: amount)
             }
             .map { amount -> String in
                 if let amount = amount {

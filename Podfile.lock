@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.7.1)
+  - BigInt (5.2.0)
   - CocoaLumberjack (3.8.0):
     - CocoaLumberjack/Core (= 3.8.0)
   - CocoaLumberjack/Core (3.8.0)
@@ -33,6 +34,7 @@ PODS:
     - CocoaLumberjack (~> 3.0)
 
 DEPENDENCIES:
+  - BigInt
   - Kingfisher
   - KingfisherWebP
   - Moya
@@ -45,6 +47,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - BigInt
     - CocoaLumberjack
     - Kingfisher
     - KingfisherWebP
@@ -57,6 +60,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
+  BigInt: f668a80089607f521586bbe29513d708491ef2f7
   CocoaLumberjack: 78abfb691154e2a9df8ded4350d504ee19d90732
   Kingfisher: f043ac666dfc96c1f37604f93effb45a7ee3a3e1
   KingfisherWebP: f4b76064c50a36c4cadd37548496ecebfdcb39e8
@@ -67,6 +71,6 @@ SPEC CHECKSUMS:
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   SVGKit: 1ad7513f8c74d9652f94ed64ddecda1a23864dea
 
-PODFILE CHECKSUM: 4156ac0fd72410198c88fc711d9660135d9f676f
+PODFILE CHECKSUM: 03a92d991070c55b2800b5e4b3ac5b4e32927bb2
 
 COCOAPODS: 1.11.2
