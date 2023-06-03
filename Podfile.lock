@@ -1,6 +1,18 @@
 PODS:
   - Alamofire (5.7.1)
   - Kingfisher (7.7.0)
+  - KingfisherWebP (1.4.0):
+    - Kingfisher (~> 7.0)
+    - libwebp (>= 1.1.0)
+  - libwebp (1.2.4):
+    - libwebp/demux (= 1.2.4)
+    - libwebp/mux (= 1.2.4)
+    - libwebp/webp (= 1.2.4)
+  - libwebp/demux (1.2.4):
+    - libwebp/webp
+  - libwebp/mux (1.2.4):
+    - libwebp/demux
+  - libwebp/webp (1.2.4)
   - Moya (15.0.0):
     - Moya/Core (= 15.0.0)
   - Moya/Core (15.0.0):
@@ -17,6 +29,7 @@ PODS:
 
 DEPENDENCIES:
   - Kingfisher
+  - KingfisherWebP
   - Moya
   - Moya/RxSwift
   - RxCocoa
@@ -27,6 +40,8 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - Kingfisher
+    - KingfisherWebP
+    - libwebp
     - Moya
     - RxCocoa
     - RxRelay
@@ -35,11 +50,13 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
   Kingfisher: f043ac666dfc96c1f37604f93effb45a7ee3a3e1
+  KingfisherWebP: f4b76064c50a36c4cadd37548496ecebfdcb39e8
+  libwebp: f62cb61d0a484ba548448a4bd52aabf150ff6eef
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
 
-PODFILE CHECKSUM: d80de4f36d8a454a01f3e85fa8806b1a5cc7bc08
+PODFILE CHECKSUM: 367ee4dd6df8c2104e21410b15aa40b2af2eae13
 
 COCOAPODS: 1.11.2

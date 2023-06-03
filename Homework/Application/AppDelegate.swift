@@ -6,12 +6,21 @@
 //
 
 import UIKit
+import Kingfisher
+import KingfisherWebP
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        // Setup Kingfisher's webp support
+        KingfisherManager.shared.defaultOptions = [
+            .processor(WebPProcessor.default),
+            .cacheSerializer(WebPSerializer.default)
+        ]
+
         return true
     }
 

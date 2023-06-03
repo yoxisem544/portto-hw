@@ -7,6 +7,7 @@ target 'Homework' do
 
   # Pods for Homework
   pod 'Kingfisher'
+  pod "KingfisherWebP"
   pod 'Moya'
   pod 'Moya/RxSwift'
   pod 'RxSwift'
