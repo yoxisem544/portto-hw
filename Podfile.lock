@@ -1,6 +1,6 @@
 PODS:
-  - Alamofire (5.5.0)
-  - Kingfisher (7.2.0)
+  - Alamofire (5.7.1)
+  - Kingfisher (7.7.0)
   - Moya (15.0.0):
     - Moya/Core (= 15.0.0)
   - Moya/Core (15.0.0):
@@ -33,8 +33,8 @@ SPEC REPOS:
     - RxSwift
 
 SPEC CHECKSUMS:
-  Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
-  Kingfisher: 3ac0b75b155cabc0e544877d1a4deea29feece92
+  Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
+  Kingfisher: f043ac666dfc96c1f37604f93effb45a7ee3a3e1
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd

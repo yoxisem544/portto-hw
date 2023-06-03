@@ -12,7 +12,7 @@ protocol OpenSeaAPIRequestType: NetworkRequestType {}
 
 extension OpenSeaAPIRequestType {
     var baseURL: URL { URL(string: "https://api.opensea.io/api/v1")! }
-    var headers: [String: String]? { ["X-API-KEY": "5b294e9193d240e39eefc5e6e551ce83"] }
+    var headers: [String: String]? { ["X-API-KEY": "453d9dff05ca4203a79891bfcdccf24e"] }
 }
 
 // MARK: - Open Sea
