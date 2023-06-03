@@ -15,7 +15,7 @@ protocol OpenSeaUseCaseType {
     ///   - owner: should be a ethereum address
     ///   - offset: start index
     /// - Returns: An array of OpenSeaAsset
-    func fetchAssets(of owner: String, offset: Int) -> Single<[OpenSeaAsset]>
+    func fetchAssets(of owner: String, cursor: String?) -> Single<OpenSeaPageResult>
 }
 
 struct OpenSeaUseCase: OpenSeaUseCaseType {
@@ -26,9 +26,9 @@ struct OpenSeaUseCase: OpenSeaUseCaseType {
         self.networkService = networkService
     }
 
-    func fetchAssets(of owner: String, offset: Int) -> Single<[OpenSeaAsset]> {
-        networkService.request(APIEndpoints.OpenSea.GetAssets(ownerAddress: owner, offset: offset))
-            .map([RawOpenSeaAsset].self, atKeyPath: "assets")
-            .map { try $0.map { try $0.domainValue() } }
+    func fetchAssets(of owner: String, cursor: String?) -> Single<OpenSeaPageResult> {
+        networkService.request(APIEndpoints.OpenSea.GetAssets(ownerAddress: owner, cursor: cursor))
+            .map(RawOpenSeaPageResult.self)
+            .map { try $0.domainValue() }
     }
 }

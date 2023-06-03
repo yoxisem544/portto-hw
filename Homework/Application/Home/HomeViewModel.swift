@@ -42,7 +42,7 @@ final class HomeViewModel {
     private let onSelectIndexSubject = PublishSubject<Int>()
 
     private let assetsSubject = BehaviorRelay<[OpenSeaAsset]>(value: [])
-    private let offsetSubject = BehaviorRelay<Int>(value: 0)
+    private let nextCursorSubject = BehaviorRelay<String?>(value: nil)
     private let doesReachEndSubject = BehaviorRelay<Bool>(value: false)
     private let onSelectAssetSubject = PublishSubject<OpenSeaAsset?>()
     private let ethAmountSubject = BehaviorRelay<String>(value: "- ETH")
@@ -69,16 +69,18 @@ final class HomeViewModel {
             .filter { [doesReachEndSubject] _ in doesReachEndSubject.value == false }
             .withUnretained(self)
             .flatMapLatest { owner, _ in
-                return owner.openSeaUseCase.fetchAssets(of: owner.address, offset: owner.offsetSubject.value)
+                return owner.openSeaUseCase.fetchAssets(of: owner.address, cursor: owner.nextCursorSubject.value)
                     .asObservable()
                     .catch { _ in return Observable.empty() } // handle error here
             }
-            .subscribe { [assetsSubject, offsetSubject, doesReachEndSubject] ob in
+            .subscribe { [assetsSubject, nextCursorSubject, doesReachEndSubject] ob in
                 switch ob {
-                case .next(let nextAssets):
-                    assetsSubject.accept(assetsSubject.value + nextAssets)
-                    offsetSubject.accept(offsetSubject.value + nextAssets.count)
-                    doesReachEndSubject.accept(nextAssets.isEmpty)
+                case .next(let nextResult):
+                    assetsSubject.accept(assetsSubject.value + nextResult.assets)
+                    nextCursorSubject.accept(nextResult.next)
+
+                    let isEnd = nextResult.next == nil
+                    doesReachEndSubject.accept(isEnd)
 
                 default:
                     break

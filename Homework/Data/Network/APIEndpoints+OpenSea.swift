@@ -25,19 +25,22 @@ extension APIEndpoints {
             var path: String { "/assets" }
 
             var parameters: [String: Any] {
-                [
+                var dic = [
                     "format": "json",
-                    "owner": ownerAddress,
-                    "offset": offset,
-                    "limit": limit
+                    "owner": ownerAddress
                 ]
+
+                if let cursor {
+                    dic["cursor"] = cursor
+                }
+
+                return dic
             }
 
-            private let ownerAddress: String, offset: Int, limit: Int
-            init(ownerAddress: String, offset: Int = 0, limit: Int = 20) {
+            private let ownerAddress: String, cursor: String?
+            init(ownerAddress: String, cursor: String?) {
                 self.ownerAddress = ownerAddress
-                self.offset = offset
-                self.limit = limit
+                self.cursor = cursor
             }
         }
     }
