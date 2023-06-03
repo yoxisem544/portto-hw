@@ -107,13 +107,7 @@ final class HomeViewModel {
                 return .empty()
             }
             .map { bigInt -> Decimal? in
-                guard let bigInt else { return nil }
-
-                let str = String(bigInt, radix: 10)
-                guard var number = Decimal(string: str) else { return nil }
-
-                number /= pow(10, 18) // ETH decimals
-                return number
+                bigInt?.ethDecimalValue
             }
             .map { [numberFormatter] amount -> String? in
                 numberFormatter.string(for: amount)
