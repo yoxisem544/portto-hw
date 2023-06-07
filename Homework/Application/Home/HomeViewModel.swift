@@ -19,7 +19,7 @@ final class HomeViewModel {
 
     private var bag = DisposeBag()
 
-    private let address = "0x19818f44faf5a217f619aff0fd487cb2a55cca65"
+    private let address = App.env.address
 
     // Input & Output
 

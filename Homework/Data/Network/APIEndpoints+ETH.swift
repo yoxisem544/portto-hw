@@ -11,7 +11,7 @@ import Moya
 protocol ETHAPIRequestType: NetworkRequestType {}
 
 extension ETHAPIRequestType {
-    var baseURL: URL { URL(string: "https://rpc.ankr.com/eth")! }
+    var baseURL: URL { App.env.ethRPCNodeURL }
 }
 
 extension APIEndpoints {

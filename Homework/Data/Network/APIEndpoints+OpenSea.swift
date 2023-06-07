@@ -11,8 +11,8 @@ import Moya
 protocol OpenSeaAPIRequestType: NetworkRequestType {}
 
 extension OpenSeaAPIRequestType {
-    var baseURL: URL { URL(string: "https://api.opensea.io/api/v1")! }
-    var headers: [String: String]? { ["X-API-KEY": "453d9dff05ca4203a79891bfcdccf24e"] }
+    var baseURL: URL { App.env.apiURL }
+    var headers: [String: String]? { App.env.openseaAPIHeader }
 }
 
 // MARK: - Open Sea
